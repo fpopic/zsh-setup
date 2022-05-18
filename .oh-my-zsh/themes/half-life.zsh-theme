@@ -91,6 +91,22 @@ ZSH_THEME_RVM_PROMPT_OPTIONS="v g"
 
 setopt prompt_subst
 
+# add kubectl context to prompt
+export KUBE_PS1_SYMBOL_ENABLE=false
+export KUBE_PS1_PREFIX='['
+export KUBE_PS1_SUFFIX=']'
+function get_cluster_short() {
+  echo "$1" | cut -d . -f1
+}
+export KUBE_PS1_CLUSTER_FUNCTION=get_cluster_short
+
+function get_namespace() {
+    echo "$1"
+}
+export KUBE_PS1_NAMESPACE_FUNCTION=get_namespace
+
+source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
+
 NEWLINE=$'\n'
 
-PROMPT="${purple}%n%{$reset_color%} in ${limegreen}%~%{$reset_color%}\$(ruby_prompt_info)\$vcs_info_msg_0_${orange}${NEWLINE}\$%{$reset_color%} "
+PROMPT="${purple}%n%{$reset_color%} in ${limegreen}%~%{$reset_color%}\$(ruby_prompt_info)\$vcs_info_msg_0_ $(kube_ps1)${orange}${NEWLINE}\$%{$reset_color%} "
