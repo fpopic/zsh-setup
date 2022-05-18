@@ -80,6 +80,7 @@ plugins=(
     zsh-history-substring-search
     zsh-syntax-highlighting
     autoswitch_virtualenv
+    kube-ps1
 )
 
 source $ZSH/oh-my-zsh.sh
