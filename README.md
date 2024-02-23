@@ -1,7 +1,8 @@
 # zsh-setup
 
-- install `iterm2`
-- install oh-my-zsh https://ohmyz.sh/#install
+- install `iterm2` https://iterm2.com/
+- install `brew` https://brew.sh/
+- install `oh-my-zsh` https://ohmyz.sh/#install
 - change theme to `half-life-fpopic`
   - https://www.linkedin.com/pulse/making-custom-zsh-theme-fun-aesthetic-md-mohibur-rahman/
 - install plugins
