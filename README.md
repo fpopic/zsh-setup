@@ -15,6 +15,9 @@
     git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
     git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+    2. Add other plugins
+    git clone https://github.com/tom-auger/cmdtime ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/cmdtime
     
     3. Add plugins to ~/.zshrc as
     plugins = ( [plugins...] zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting)
